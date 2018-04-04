@@ -1,0 +1,135 @@
+
+
+ES432 12 Week Exam
+
+Name:
+
+
+This exam is due by midnight Friday April 6. You may use any resources
+besides other people.  Create a new git repository on your machine and
+save this text file to it. Write your answers in this file at the
+[ANSWER:] prompts. Your repository should also include a python script
+for question 1 and at least an HTML file for question 2 (possibly a
+CSS and JS file as well). Create a private github repository for your
+work and add me as a collaborator. DO THIS BEFORE FRIDAY so I can
+confirm you have configured git correctly.
+
+Each question is worth 25 points. (Question 5 is 0 points)
+
+----------------------------------------------------------------------
+
+1.) Blockchain
+
+    A.) Describe in words how hashes are used to "chain" together blocks.
+
+    --> ANSWER:
+
+    B.) Mine the block containing the message:
+    		bitcoins are the future
+	Valid blocks have an md5 hash that begins with three C's. The previous
+	block's hash is:
+		ccc46c9d700d70563964456c3e42cea6
+	The block structure is:
+		<previous hash>
+		---
+		<message>
+		---
+		<pad>
+	
+	Work smarter not harder! Write a python script to mine the
+	block. See https://docs.python.org/2/library/hashlib.html#module-hashlib
+
+    --> ANSWER (the pad and the block hash):
+    
+2.) HTML, CCS, Javascript
+
+    Create the web page shown in web_page.gif. When you click on
+    the colored squares the background changes to match the square
+    color. Use javascript to change the color when a box is clicked and use CSS to
+    apply the following styles to the page:
+
+    * The h1 element "Retro Web Page" should have a font size of 40 px and
+      its font-family should be monospace.
+    * The colored boxes should have a solid black border and the cursor should change to
+      a pointer (little hand) when it is inside a box.
+
+    You may create the boxes using clever CSS and HTML but this can be
+    difficult, try using img tags instead. Make your own colored
+    squares or grab some from the web: https://goo.gl/r9Fock. You may
+    use jQuery to simplify the javascript if you would like.
+
+    Bonus (10 points): Add a fourth square with a question mark inside. Set the
+    background to a random color when it is clicked.
+
+3.) Encryption
+
+    A.) Asymmetric encryption provides security as well as a means to
+    prove identity. Symmetric encryption only provides security. Why
+    do we still use symmetric algorithms then?
+
+    --> ANSWER:
+
+    B.) How can you exchange a secret key with a web server like Google if everyone
+    can listen in on your conversation? (What is the most common algorithm?)
+
+    --> ANSWER:
+
+    C.) The string below is encrypted using aes-128-cbc. The key is
+    derived from the password t0psecr3t. The original encrypted string is encoded in
+    base64 so that it only contains printable characters (otherwise it
+    can't be pasted into a text document like this). Use google to
+    figure out how to decode base64 and then decrypt the message (hint
+    you can use openssl to encode/decode base64).
+
+    U2FsdGVkX1+5/LG6m0CEAJ85YEMfWn0sPdMFVU2yumOSMX4ek0yrhIYlxl47cI9byw1MNQoosEn2PHQeU3Lhwg==
+
+    --> ANSWER: (also include the openssl commands you used)
+
+    D.) Create an RSA key pair and use your private key to sign the message below:
+
+    I <your name here> did not give or receive help on this examination.
+
+    Encode the result in base64 and paste it below:
+
+    ANSWER -->
+
+    Provide your public key in PKCS8 format so the signature can be verified.
+
+    PUBLIC KEY --> 
+    
+4.) Servers and the Internet
+
+    A.) Use wireshark to sniff the traffic exchanged between your
+    browser and the New York Times web server at nytimes.com. Figure out what cipher
+    parameters are used for the connection and answer the questions below:
+
+    * What is the key exchange algorithm?
+    --> ANSWER:
+    
+    * What is the symmetric encryption algorithm?
+    --> ANSWER:
+    
+    * What is the symmetric encryption key length?
+    --> ANSWER:
+    
+    * What is the symmetric encryption mode?
+    --> ANSWER:
+
+    B.) In class we connected to an HTTP server to retrieve HTML and
+    CSS files. To send e-mail you need to connect to an SMTP server. SMTP
+    servers are usually available on port 587. Connect to Yahoo's mail
+    server at smtp.mail.yahoo.com. Once you are connected greet the
+    server by sending the message: (replace your_cool_alias with something clever)
+    	   HELO <your_cool_alias>
+	   
+    What is the message you receive from the server? (copy it below)
+    Disconnect by hitting ctrl-] and then typing 'quit'.  DO NOT SEND
+    ANY OTHER MESSAGES TO THE SERVER!
+
+    --> ANSWER:
+
+5.) Are there any other topics you would like to cover by the end of
+the class? No promises but I will do my best! :)
+
+    --> ANSWER:
+
