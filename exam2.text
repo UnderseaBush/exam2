@@ -22,7 +22,8 @@ Each question is worth 25 points. (Question 5 is 0 points)
 
     A.) Describe in words how hashes are used to "chain" together blocks.
 
-    --> ANSWER:
+    --> ANSWER: Hashing is used to chain together blocks by providing the data from the previous block as a hash in the current block.  This makes block chains impossible to change because one small change
+in one block will effect  every block in the chain. 
 
     B.) Mine the block containing the message:
     		bitcoins are the future
@@ -40,8 +41,10 @@ Each question is worth 25 points. (Question 5 is 0 points)
 	block. See https://docs.python.org/2/library/hashlib.html#module-hashlib
 
     --> ANSWER (the pad and the block hash):
+hash- CCCB0666B146D51AF1FE2683425E5F2A
+pad- DmEK3oL
     
-2.) HTML, CCS, Javascript
+2.) HTML, CSS, Javascript
 
     Create the web page shown in web_page.gif. When you click on
     the colored squares the background changes to match the square
@@ -67,15 +70,15 @@ Each question is worth 25 points. (Question 5 is 0 points)
     prove identity. Symmetric encryption only provides security. Why
     do we still use symmetric algorithms then?
 
-    --> ANSWER:
+    --> ANSWER: We still use symmetric algorithms because they are much faster than asymmetric algorithms. Oftentimes hybrid algorithms are used that encorporate both are used. 
 
     B.) How can you exchange a secret key with a web server like Google if everyone
-    can listen in on your conversation? (What is the most common algorithm?)
+    can listen in on your conversation? (What is the most common algorithm?
 
-    --> ANSWER:
+    --> ANSWER: Diffie-Hellman
 
     C.) The string below is encrypted using aes-128-cbc. The key is
-    derived from the password t0psecr3t. The original encrypted string is encoded in
+    derived from the password t0psecr3. The original encrypted string is encoded in
     base64 so that it only contains printable characters (otherwise it
     can't be pasted into a text document like this). Use google to
     figure out how to decode base64 and then decrypt the message (hint
@@ -85,17 +88,40 @@ Each question is worth 25 points. (Question 5 is 0 points)
 
     --> ANSWER: (also include the openssl commands you used)
 
+openssl base64 -d -in message.txt -out message.enc
+
+openssl aes-128-cbc -d  -in message.enc 
+
+
+Well I guess you got this one right. :)
+
     D.) Create an RSA key pair and use your private key to sign the message below:
 
     I <your name here> did not give or receive help on this examination.
 
     Encode the result in base64 and paste it below:
 
-    ANSWER -->
+    ANSWER --> Qp6Tp56Lry5ekZd5oU0+KKxrLaBvUFVB0OC/prvkJs8G4I8aAWg2gMtuAoV/iVna
+dBSwJqJ3roANekI3sBhFtQInpAAXJtq10E5/y7e/HHfkssDglMpoG9e3uiiQVihJ
+fq9YD3v00AOsnzG42WzSjYYkE2XFzRAgRfgyXZp57mxusl+RkBFFl25laHxaY2cI
+x0NJA2q4Fe7ialqlvm06/tuncwaFj78quj16/dF8hPRorLpzRUXwkePQmnIgItAF
+8JIC6wp2rJAPHHXHPLzjLWBLLgvwBaC1hlSHpNYvcYXbJ5ltxZnGcb0wmcMu8O8b
+xQjSzSV45QCN2VW5/0r34Q==
+
 
     Provide your public key in PKCS8 format so the signature can be verified.
 
     PUBLIC KEY --> 
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+CeWGevazpKLnNXLZ6oa
+UEJPUOQ8Cim9LF5H2RBE9xal/EhN2kLpms/AqNiJovUUYxcSNqQT+gPIWOcNnr63
+hBdR0fYd1Y6gBwHMeM3fDubkPq0UXhFtv9v/qKz7UAkgs4FQEZFPpH75rJPT7Gbq
++elJYXqDCGGdo043M9azABM6sbZSkd47mweX0KQiQBQ7IZ499KNrgdMpXnz4g1oi
+rO3hCas8REo8Z4FagPxTznUQmfETCerwmmBLgUl5oZuNORrGosDFA9ZmIhtZLr9v
+Srex9OPhUK9Fc4RInu21HtPhBOmS9sbtXUgUIzlgNUIL6NJuu1lq9JpwAzPTqGRa
+YwIDAQAB
+-----END PUBLIC KEY-----
+
     
 4.) Servers and the Internet
 
@@ -103,17 +129,19 @@ Each question is worth 25 points. (Question 5 is 0 points)
     browser and the New York Times web server at nytimes.com. Figure out what cipher
     parameters are used for the connection and answer the questions below:
 
+TLS_ECDHE_ECDSSA_WITH_AES_128_GCM_SHA256
+
     * What is the key exchange algorithm?
-    --> ANSWER:
+    --> ANSWER: Diffie-Hellman
     
     * What is the symmetric encryption algorithm?
-    --> ANSWER:
+    --> ANSWER: Advanced Encryption Standard
     
     * What is the symmetric encryption key length?
-    --> ANSWER:
+    --> ANSWER: 128 bits
     
     * What is the symmetric encryption mode?
-    --> ANSWER:
+    --> ANSWER: GCM
 
     B.) In class we connected to an HTTP server to retrieve HTML and
     CSS files. To send e-mail you need to connect to an SMTP server. SMTP
@@ -126,7 +154,7 @@ Each question is worth 25 points. (Question 5 is 0 points)
     Disconnect by hitting ctrl-] and then typing 'quit'.  DO NOT SEND
     ANY OTHER MESSAGES TO THE SERVER!
 
-    --> ANSWER:
+    --> ANSWER: 250 smtp431.mai.bf1.yahoo.com Hello <Undersea_Bush> [136.160.90.33]
 
 5.) Are there any other topics you would like to cover by the end of
 the class? No promises but I will do my best! :)
