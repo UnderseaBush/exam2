@@ -159,5 +159,5 @@ TLS_ECDHE_ECDSSA_WITH_AES_128_GCM_SHA256
 5.) Are there any other topics you would like to cover by the end of
 the class? No promises but I will do my best! :)
 
-    --> ANSWER:
+    --> ANSWER: I would really like to include some more advanced python scripts that can do things like webscraping and interacting with google docs, excel, word or even our own websites that can then proceed to influence our arduino code. 
 
