@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Exam2</title>
+		<meta charset="utf-8"/>
+		<link rel = "stylesheet" type = "text/css" href ="style.css"/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		    $(".red").click(function(){
+		       $("body").css("background-color", "Red");
+		    });
+		});
+		</script>
+    <script>
+		$(document).ready(function(){
+		    $(".blue").click(function(){
+		       $("body").css("background-color", "Blue");
+		    });
+		});
+		</script>
+    <script>
+		$(document).ready(function(){
+		    $(".green").click(function(){
+		       $("body").css("background-color", "Green");
+		    });
+		});
+		</script>
+    <!-- <script>
+    $(document).ready(function(){
+        $(".question").click(function(){
+if(Math.random()<0.5){
+  $("body").css("background-color", "Green");
+}
+  else  {
+    $("body").css("background-color", "Blue");
+  }
+
+        });
+    });
+	</script> -->
+  <script>
+  function random_bg_color() {
+      var x = Math.floor(Math.random() * 256);
+      var y = Math.floor(Math.random() * 256);
+      var z = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+   console.log(bgColor);
+
+      document.body.style.background = bgColor;
+      }
+  </script>
+  <script>
+  $(document).ready(function(){
+      $(".question").click(function(){
+random_bg_color();
+
+
+      });
+  });
+</script>
+
+
+    	<body>
+
+        <h1>
+Retro Websites
+        </h1>
+<p id="demo"></p>
+
+
+        <button class = "square">
+	<img class = "blue" alt="BlueSquare" src= "BlueSquare.PNG">
+</button>
+
+<button class = "square">
+<img class = "red" alt="RedSquare" src= "RedSquare.PNG">
+</button>
+
+<button class = "square">
+<img class = "green" alt="GreenSquare" src= "GreenSquare.PNG">
+</button>
+
+<button class = "square">
+<img class = "question" alt="questionmark" src= "QuestionMark.jpg">
+</button>
+
+      </body>
