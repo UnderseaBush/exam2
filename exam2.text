@@ -22,8 +22,10 @@ Each question is worth 25 points. (Question 5 is 0 points)
 
     A.) Describe in words how hashes are used to "chain" together blocks.
 
-    --> ANSWER: Hashing is used to chain together blocks by providing the data from the previous block as a hash in the current block.  This makes block chains impossible to change because one small change
-in one block will effect  every block in the chain. 
+    --> ANSWER: Hashing is used to chain together blocks by providing
+the data from the previous block as a hash in the current block.  This
+makes block chains impossible to change because one small change in
+one block will effect every block in the chain.
 
     B.) Mine the block containing the message:
     		bitcoins are the future
@@ -70,7 +72,9 @@ pad- DmEK3oL
     prove identity. Symmetric encryption only provides security. Why
     do we still use symmetric algorithms then?
 
-    --> ANSWER: We still use symmetric algorithms because they are much faster than asymmetric algorithms. Oftentimes hybrid algorithms are used that encorporate both are used. 
+    --> ANSWER: We still use symmetric algorithms because they are
+        much faster than asymmetric algorithms. Oftentimes hybrid
+        algorithms are used that encorporate both are used.
 
     B.) How can you exchange a secret key with a web server like Google if everyone
     can listen in on your conversation? (What is the most common algorithm?
@@ -159,5 +163,8 @@ TLS_ECDHE_ECDSSA_WITH_AES_128_GCM_SHA256
 5.) Are there any other topics you would like to cover by the end of
 the class? No promises but I will do my best! :)
 
-    --> ANSWER: I would really like to include some more advanced python scripts that can do things like webscraping and interacting with google docs, excel, word or even our own websites that can then proceed to influence our arduino code. 
+    --> ANSWER: I would really like to include some more advanced
+        python scripts that can do things like webscraping and
+        interacting with google docs, excel, word or even our own
+        websites that can then proceed to influence our arduino code.
 
